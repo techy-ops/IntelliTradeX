@@ -99,9 +99,3 @@ Modular and scalable backend architecture
 IntelliTradeX combines the power of Machine Learning, Natural Language Processing, and Interactive Web Technologies to provide a unified AI system for financial analysis. The seamless integration of backend intelligence with a modern, futuristic frontend creates a professional-grade platform for market research, financial prediction, and sentiment-based decision support.
  
 
-TEAM LEAD:  P. Krishna Keerthana
-TEAM MEMBERS:  R. Laxmi Rupali
-               R. Lalithasahasra
-               V. Manoj
-               G. Malishka Reddy
-               R. Pavan Kumar
