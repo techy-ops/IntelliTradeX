@@ -1,101 +1,123 @@
-IntelliTradeX
-  AI-Powered Stock Prediction & Sentiment Analysis Dashboard
-Problem Statement Id : SIH25127
+# IntelliTradeX
 
-🧠 Abstract:
-In today’s fast-paced financial markets, predicting stock movements and understanding investor sentiment are crucial for informed decision-making. IntelliTradeX is an AI-driven web application that integrates Machine Learning models for stock price prediction with Natural Language Processing (NLP) for sentiment analysis of financial news and market data.
-The system enables users to analyze, predict, and visualize real-time stock trends while providing AI-based insights on the emotional tone of related news headlines. The integration of backend intelligence with a dynamic, interactive frontend allows users to explore market behavior intuitively and make data-driven investment decisions.
+### AI-Powered Stock Prediction & Sentiment Analysis Platform
 
-🧩 System Overview:
-🔹 Frontend 
-Built using React.js (or Next.js with Tailwind CSS and ShadCN UI)
-Provides an interactive dark-themed dashboard
-Handles user interactions, data visualization, and real-time updates
-Connects to the backend via Axios API calls
-Uses Recharts and Framer Motion for elegant animations and charting
+**Smart India Hackathon Problem Statement:** SIH25127
 
-🔹 Backend 
-Built with FastAPI (Python) for high-performance API handling
-Contains ML models for:
-Stock Price Prediction (using regression or LSTM models)
-Sentiment Analysis (using NLP and pre-trained models)
-Stores and retrieves prediction records, training logs, and user queries
-Interfaces with a database (MongoDB / PostgreSQL / SQLite) for persistent storage
-Includes modular Python services:
-model_service.py → Handles model loading, training, and prediction
-sentiment_service.py → Performs sentiment analysis on news text
-data_fetcher.py → Fetches live stock data via APIs (e.g., Yahoo Finance, Alpha Vantage)
-db.py → Manages database sessions and schema models
+IntelliTradeX is an AI-powered financial analytics platform that combines **Machine Learning, Deep Learning, and NLP** to analyze stock market trends, predict potential price movements, and understand investor sentiment from financial news.
 
-TECH STACK
-Frontend: Built with React.js / Next.js, styled using Tailwind CSS and ShadCN UI. Tools like Recharts, Axios, and Framer Motion handle data visualization, API communication, and animations, ensuring a smooth and dynamic user experience.
-Backend: Developed in Python using FastAPI for high-performance API handling. It integrates Pydantic for validation, Loguru for logging, Uvicorn as the server, and Dotenv for secure environment management.
-Machine Learning: Uses Scikit-learn, TensorFlow, Pandas, NumPy, and Joblib to power the hybrid LSTM–Random Forest model for stock prediction and sentiment analysis.
-Database: SQLite / MongoDB stores prediction results, sentiment logs, and training data for continuous improvement.
-Development & Version Control: Tools like VS Code, Postman, and Git were used for development, while GitHub manages code versioning and collaboration
+The platform transforms complex market data into **interactive visual insights and AI-driven predictions**, helping users make more informed, data-driven decisions.
 
-🧠 System Architecture
+---
 
-The architecture of IntelliTradeX follows a modular and data-driven pipeline integrating multiple components:
+## 🚀 Key Features
 
-Frontend (Streamlit)
+* 📈 **Stock Price Prediction** using LSTM and Machine Learning models
+* 📰 **Financial News Sentiment Analysis** using NLP
+* 📊 **Interactive Stock Market Dashboard**
+* 🔮 **AI-Based Market Trend Insights**
+* 📉 **Historical Price & Prediction Visualization**
+* 🧠 **Hybrid ML Approach** combining LSTM and Random Forest
+* ⚡ **Automated Stock Data Fetching**
+* 💾 **Prediction & Analysis Data Storage**
 
-Acts as the user-facing dashboard.
+---
 
-Displays visual insights like price trends, sentiment scores, and prediction graphs.
+## 🧩 How It Works
 
-Backend (Flask + Python)
+```text
+Stock Market Data ──┐
+                    ├──> Data Preprocessing ──> ML Model ──> Price Prediction
+Financial News ─────┘
+                         │
+                         └──> NLP Sentiment Analysis
+                                      │
+                                      ▼
+                           Interactive Dashboard
+```
 
-Processes requests from the frontend.
+The system follows a modular pipeline:
 
-Connects with the ML models, APIs, and database for responses.
+1. **Data Collection** – Fetches historical and market-related stock data.
+2. **Preprocessing** – Cleans, transforms, and prepares data for analysis.
+3. **Prediction** – Uses LSTM/ML models to identify potential stock price trends.
+4. **Sentiment Analysis** – Analyzes financial news to determine market sentiment.
+5. **Visualization** – Presents predictions, trends, and sentiment insights through an interactive dashboard.
 
-AI/ML Layer
+---
 
-Built using TensorFlow, Keras, and Scikit-learn.
+## 🛠️ Tech Stack
 
-Implements LSTM (Long Short-Term Memory) networks for stock price forecasting.
+### Frontend & Dashboard
 
-Integrates Sentiment Analysis (VADER / OpenAI API) to gauge market mood.
+* **Streamlit** – Interactive financial dashboard
+* **Plotly / Charts** – Market data visualization
+* **Python** – Application development
 
-Data Sources
+### Machine Learning & AI
 
-Uses Yahoo Finance API for historical market data.
+* **Python**
+* **TensorFlow / Keras**
+* **Scikit-learn**
+* **Pandas**
+* **NumPy**
+* **Joblib**
 
-Uses News API and VADER for sentiment and trend extraction.
+### Models
 
-Database (SQLite)
+* **LSTM** – Time-series stock price prediction
+* **Random Forest** – Machine learning-based prediction
+* **NLP Sentiment Analysis** – Financial news sentiment classification
 
-Stores stock history, trained model logs, and prediction records.
+### Data & APIs
 
-Visualization & Insights
+* **Yahoo Finance / Financial APIs**
+* Historical and real-time market data
 
-Displays combined financial and emotional indicators through Matplotlib and Plotly charts.
+### Development Tools
 
-💡 Innovative Features:
+* **VS Code**
+* **Git & GitHub**
+* **Jupyter Notebook**
 
-Dual AI systems (Stock ML + Sentiment NLP)
-Real-time prediction and visualization
-Retrainable AI model
-Smooth and interactive dark-mode UI
-Data-driven decision insights for users
-Modular and scalable backend architecture
+---
 
-📊  Data Flow:
+## 📂 Project Structure
 
-1. User enters stock name in frontend → /predict
-2. FastAPI receives input → queries ML model → returns predicted price
-3. Frontend visualizes prediction on a dynamic Recharts line graph
-4. User checks sentiment of related news → /sentiment
-5. Backend NLP model analyzes tone → returns sentiment label
-6. Dashboard updates live with insights
-🔮 Future Enhancements:
-•	Integrate Deep Learning (LSTM) for time-series forecasting
-•	Add user authentication and saved portfolios
-•	Enable real-time socket streaming for live prices
-•	Deploy on AWS or Render for global accessibility
+```text
+IntelliTradeX/
+│
+├── enhanced_features.py       # Additional AI & dashboard features
+├── fetch_stock_data.py        # Fetches stock market data
+├── preprocess_store_data.py   # Data preprocessing and storage
+├── sentiment_analysis.py      # Financial news sentiment analysis
+├── train_lstm_model.py        # LSTM model training
+├── run_model.py               # Runs prediction pipeline
+├── stock_dashboard.py         # Streamlit dashboard
+├── requirements.txt           # Project dependencies
+└── README.md                  # Project documentation
+```
 
-🏁 Conclusion:
-IntelliTradeX combines the power of Machine Learning, Natural Language Processing, and Interactive Web Technologies to provide a unified AI system for financial analysis. The seamless integration of backend intelligence with a modern, futuristic frontend creates a professional-grade platform for market research, financial prediction, and sentiment-based decision support.
- 
+---
 
+## 🧠 AI & ML Pipeline
+
+**Market Data → Preprocessing → Feature Engineering → LSTM / ML Model → Prediction**
+
+**Financial News → NLP Processing → Sentiment Classification → Sentiment Score**
+
+The combination of **quantitative market prediction** and **qualitative sentiment analysis** provides a more comprehensive view of market behavior.
+
+---
+
+## 🎯 Objective
+
+IntelliTradeX aims to make financial market analysis more **accessible, intelligent, and data-driven** by bringing stock prediction and sentiment analysis together in a single platform.
+
+> **Predict the trend. Understand the sentiment. Make smarter decisions.**
+
+---
+
+## ⚠️ Disclaimer
+
+IntelliTradeX is an educational and analytical project. Its predictions and insights are **not financial advice** and should not be used as the sole basis for investment decisions.
